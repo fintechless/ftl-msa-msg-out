@@ -1,0 +1,5 @@
+component:
+  name: aws_k8s_deployment
+  dependsOn:
+    - aws_ecr_repository
+    - aws_eks_node_group

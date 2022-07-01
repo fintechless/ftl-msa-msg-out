@@ -1,0 +1,38 @@
+---
+version: "2"
+checks:
+  file-lines:
+    config:
+      threshold: 400
+  method-complexity:
+    config:
+      threshold: 20
+  method-count:
+    config:
+      threshold: 35
+  method-lines:
+    config:
+      threshold: 100
+  return-statements:
+    config:
+      threshold: 10
+plugins:
+  markdownlint:
+    enabled: true
+  radon: 
+    enabled: true
+  pep8:
+    enabled: true
+  sonar-python:
+    enabled: true
+    config:
+      tests_patterns:
+        - ftl_msa_msg_out/**
+        - tests/**
+  structure:
+    enabled: true
+  duplication:
+    enabled: true
+exclude_patterns:
+  - '**/__pycache__/'
+  - '**/.pytest_cache/'
