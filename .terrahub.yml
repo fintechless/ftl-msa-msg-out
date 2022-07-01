@@ -1,0 +1,13 @@
+project:
+  name: ftl_msa_msg_out
+  code: 028a7c99
+  include:
+    - iac
+  exclude:
+    - .git
+    - .terraform
+
+terraform:
+  version: 1.2.3
+  varFile:
+    - default.tfvars

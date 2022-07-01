@@ -1,0 +1,4 @@
+component:
+  name: aws_eks_node_group
+  dependsOn:
+    - aws_iam_eks_node_group

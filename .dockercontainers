@@ -1,0 +1,7 @@
+msa:
+  msg-out:
+    name: ftl_msa_msg_out.msa.run
+    dpl_name: msa-msg-out-dpl
+    svc_name:  msa-msg-out-svc
+    igr_name: msa-msg-out-igr
+    health_check_path: /msa/out/_healthy
