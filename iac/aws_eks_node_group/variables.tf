@@ -4,8 +4,9 @@ variable "src" {
     config_key = string
 
     node_group_name = string
-    instance_types  = list(string)
     ami_type        = string
+    capacity_type   = string
+    instance_types  = list(string)
 
     scaling_config = object(
       {
