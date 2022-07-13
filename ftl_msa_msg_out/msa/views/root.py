@@ -94,6 +94,10 @@ def threaded(**kwargs) -> None:
             transaction_model.release(
                 storage_path=incoming.storage_path.key,
                 message_type=incoming.message_version,
+                ht_response_code="ACSC",
+                ht_response_message="ACSC",
+                currency=incoming.message_proc.currency,
+                amount=incoming.message_proc.amount
             )
         LOGGER.logger.debug("Finshed threaded process for MSA MSG OUT microservice")
     except Exception as err:
