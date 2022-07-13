@@ -190,7 +190,7 @@ def post() -> Response:
         incoming.fill_message_xml()
         incoming.fill_message_proc()
         incoming.fill_message_type()
-        incoming.fill_message_version()
+        incoming.fill_message_version(from_header=incoming.fill_message_version(from_header=request_context.headers_context.message_type))
         incoming.fill_message_version_keys()
     except ValueError as exception:
         LOGGER.logger.error(exception)
